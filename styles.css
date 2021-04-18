@@ -13,9 +13,6 @@ body {
     width: 850px;
     border: 2px solid white;
     outline: 2px solid white;
-    /* position: absolute;
-    top: 1rem;
-    right: 25rem; */ 
 }
 
 header img {
@@ -192,4 +189,46 @@ button {
     border: 1.5px solid #61606083;
     background: white;
     border-radius: 5px;
+}
+
+@media (max-width : 400px) {
+    .container {
+        margin: 1rem 1.5rem;
+        background-color: #ffffff; 
+        position: absolute; 
+        width: 300px;
+        border: 2px solid white;
+        outline: 2px solid white;
+    }
+
+    header img {
+        display: none;
+        /* width: 100px;
+        height: 50px;
+        margin-left: .2rem; */
+    }
+
+    .header-details {
+        text-align: center;
+    }
+    
+    .mini-p {
+        text-align: justify;        
+        width: 280px;        
+    }
+    .header-details span {
+        font-size: 1.9rem;
+    }
+    .grey {
+        font-size: 1rem;
+    }
+    .social-media {
+        display: block;
+    }
+    .Education-Main {
+        display: block;
+    }
+    .Education-Main p {
+        width: 280px;
+    }
 }
