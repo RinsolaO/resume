@@ -183,6 +183,19 @@ button {
   border-radius: 5px;
 }
 
+.powered {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+.powered img {
+  width: 20%;
+  /* height: 200px; */
+  margin-left: 2rem;
+}
+
 @media (max-width: 400px) {
   .container {
     margin: 1rem 1.5rem;
@@ -222,5 +235,9 @@ button {
   }
   .Education-Main p {
     width: 280px;
+  }
+  .powered img {
+    width: 35%;
+    margin-left: 2rem;
   }
 }
