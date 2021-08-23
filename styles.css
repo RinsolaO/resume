@@ -8,36 +8,61 @@ body {
 }
 
 .container {
-  margin: 2rem 13rem;
+  margin: 2rem auto;
   background-color: #ffffff;
-  width: 850px;
+  width: 95%;
   border: 2px solid white;
   outline: 2px solid white;
 }
-
-header img {
-  width: 200px;
-  height: 100px;
-  margin-right: 2rem;
-}
 header {
-  display: flex;
-  justify-content: space-around;
-  padding: 1.5rem 3rem;
-  border-bottom: 1.5px solid black;
+  padding: 1.5rem 0;
+  border-bottom: 1.5px solid #492c89;
 }
 
 .header-details {
-}
-.header-details span {
-  font-size: 2.5rem;
-  color: #492c89;
+  width: 85%;
+  margin: 1rem auto;
 }
 
+.header-details p {
+  width: 90%;
+  opacity: 0;
+}
+
+.header-details span {
+  text-align: left;
+  font-size: 2.5rem;
+  color: #492c89;
+  margin-left: -0.2rem;
+  animation: name 0.4s 1s ease-in forwards;
+  opacity: 0;
+  filter: blur(300px);
+}
+
+.title {
+  text-transform: uppercase;
+}
 .grey {
   margin-top: 0;
   color: #616060;
   font-size: 1.3rem;
+  animation: name 0.5s 2s ease-in forwards;
+  transform: scale(0.7);
+}
+@keyframes name {
+  0% {
+    opacity: 0;
+    filter: brightness(100);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
 }
 
 .mini-p {
@@ -45,12 +70,27 @@ header {
   line-height: 1.6rem;
 }
 
+.header-details .mini-p {
+  animation: move 0.7s 3s ease-in forwards;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
 .social-media {
-  /* margin-top: 1rem; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "grid-left grid-right";
-  border-bottom: 1.5px solid black;
+  border-bottom: 1.5px solid #492c89;
+  padding: 1rem 0;
 }
 
 .mini-flex img {
@@ -155,7 +195,7 @@ i {
 }
 
 .mini-flex-box p {
-  width: 200px;
+  width: 40%;
 }
 
 .languages {
@@ -196,21 +236,13 @@ button {
   margin-left: 2rem;
 }
 
-@media (max-width: 400px) {
-  .container {
-    margin: 1rem 1.5rem;
-    background-color: #ffffff;
-    position: absolute;
-    width: 300px;
-    border: 2px solid white;
-    outline: 2px solid white;
+@media (max-width: 814px) {
+  .header-details {
+    width: 100%;
   }
-
-  header img {
-    display: none;
-    /* width: 100px;
-        height: 50px;
-        margin-left: .2rem; */
+  .header-details p {
+    width: 100%;
+    text-align: center;
   }
 
   .header-details {
@@ -229,9 +261,31 @@ button {
   }
   .social-media {
     display: block;
+    margin: auto;
+  }
+  .Education-Main .grid-left {
+    padding-left: 0;
   }
   .Education-Main {
     display: block;
+  }
+  .Education-Main .grid-left .education,
+  .Education-Main .grid-right .skills,
+  .certificates,
+  .langu {
+    padding-left: 1rem;
+  }
+
+  .mini-flex-box {
+    display: block;
+  }
+
+  .mini-flex-box p {
+    width: 10px;
+  }
+  .round-flex {
+    margin-left: 0;
+    margin-bottom: 0.9rem;
   }
   .Education-Main p {
     width: 280px;
@@ -239,5 +293,14 @@ button {
   .powered img {
     width: 35%;
     margin-left: 2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .Education-Main .grid-left .education,
+  .Education-Main .grid-right .skills,
+  .certificates,
+  .langu {
+    padding-left: 0.1rem;
   }
 }
